@@ -15,5 +15,5 @@ supervisord_program_addl_settings: {}
 
 
 
-#add the following varibale to ansible-jupyter-supervisord role/meta/main.yml under the supervisord program role in order to redirect logs 
-#supervisord_program_redirect_flag: true
+#add the following varibale to ansible-jupyter-supervisord role/meta/main.yml under the supervisord program role in order to redirect logs and set redirect_stderr_flag : true in jupyter-supervisord
+#supervisord_program_redirect_stderr:
