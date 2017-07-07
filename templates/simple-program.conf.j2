@@ -8,6 +8,12 @@ user={{supervisord_program_username | default('root')}}
 command={{supervisord_program_command}}
 autorestart={{supervisord_program_autorestart|default(true)|to_json}}
 stopasgroup={{supervisord_stopasgroup|default(true)|to_json}}
+{% if supervisord_outlog is defined %}
+stdout_logfile={{supervisord_outlog}}
+{% endif %}
+{% if supervisord_errlog is defined %}
+stderr_logfile={{supervisord_errlog}}
+{% endif %}
 {% if supervisord_program_redirect_stderr is defined %}
 redirect_stderr={{supervisord_program_redirect_stderr}}
 {% endif %}
